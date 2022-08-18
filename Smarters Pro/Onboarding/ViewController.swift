@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var newItemScrollCollectionView: UICollectionView!
+    
     var index = 0
     var inForwardDirection = true
     var timer: Timer?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func addUserAction(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController")as! DashboardViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -88,12 +88,9 @@ class ViewController: UIViewController {
                 index -= 1
             }
         }
-
+        
     }
-
-    /**
-     call this method when collection view loaded
-     */
+    
     func startTimer() {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true);
