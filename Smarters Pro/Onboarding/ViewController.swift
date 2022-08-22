@@ -9,13 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var listUserButton: UIButton!
-    @IBOutlet weak var ListUserImage: UIImageView!
     @IBOutlet weak var anyNameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var newItemScrollCollectionView: UICollectionView!
+    @IBOutlet weak var termsButton: UIButton!
     
     var index = 0
     var inForwardDirection = true
@@ -35,7 +34,7 @@ class ViewController: UIViewController {
         self.userNameTextField.setLeftPaddingPoints(60)
         self.urlTextField.setLeftPaddingPoints(60)
         self.passwordTextField.setLeftPaddingPoints(60)
-        ListUserImage.image = UIImage(named:"PersonList")
+//        ListUserImage.image = UIImage(named:"PersonList")
         anyNameTextField.attributedPlaceholder = NSAttributedString(
             string: "Anyname",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -57,7 +56,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func addUserAction(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController")as! DashboardViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -88,9 +87,12 @@ class ViewController: UIViewController {
                 index -= 1
             }
         }
-        
+
     }
-    
+
+    /**
+     call this method when collection view loaded
+     */
     func startTimer() {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true);
