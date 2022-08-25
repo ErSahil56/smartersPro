@@ -8,11 +8,13 @@
 import UIKit
 
 class ChoosePlaylistViewController: UIViewController {
+    
     @IBOutlet weak var choosePlaylistCollectionView: UICollectionView!
-    @IBOutlet weak var collectionViewLeadingConstraints: NSLayoutConstraint!
+    @IBOutlet weak var disclaimerLabel: UILabel!
+    @IBOutlet weak var optionLabel: UILabel!
     
     var imageArray = [UIImage(named: "person")!, UIImage(named: "person1")!,UIImage(named: "person2")!,UIImage(named: "person3")! ,UIImage(named: "plus")!]
-    var header  = ["1","2"]
+    var userArray = ["John", "Alex", "James", "Steven", "Add Playlist"]
     var cellInddex = IndexPath()
     
     override func viewDidLoad() {
@@ -46,12 +48,13 @@ class ChoosePlaylistViewController: UIViewController {
 
 }
 
-//MARK: - UI COLLOECTION VIEW METHODS
-
+//MARK: - UICOLLECTIONVIEW METHODS
 extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        header.count
+        return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
@@ -59,16 +62,11 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout,UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaylistCollectionViewCell", for: indexPath) as! PlaylistCollectionViewCell
         cell.personImage.image = imageArray[indexPath.row]
-        cell.optionHolderView.isHidden = true
+        cell.nameLabel.text = userArray[indexPath.row]
+        cell.personImage.borderWidth = 4
+        cell.personImage.borderColor = .clear
         if indexPath.row == 4 {
-            cell.optionHolderView.isHidden = true
-            cell.nameLabel.text = "Add Playlist"
             cell.personImage.backgroundColor = hexStringToUIColor(hex: "#2D3C68")
-            cell.personImage.borderWidth = 4
-            
-        }
-        if indexPath.row == 2 {
-            cell.optionHolderView.isHidden = false
         }
         return cell
     }
@@ -76,14 +74,26 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout,UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaylistCollectionViewCell", for: indexPath) as! PlaylistCollectionViewCell
         cellInddex = indexPath
-        if indexPath == cellInddex {
-            cell.optionHolderView.isHidden = false
-        }
-        print(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return  CGSize(width: (collectionView.frame.size.width - 10) / 5, height: (collectionView.frame.size.height ))
+        return CGSize(width: (collectionView.frame.size.width - 10) / 4, height: (collectionView.frame.size.height))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        
+        if let indexPath = context.previouslyFocusedIndexPath {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaylistCollectionViewCell", for: indexPath) as! PlaylistCollectionViewCell
+            cell.personImage.borderWidth = 4
+            cell.personImage.borderColor = .clear
+        }
+        
+        if let indexPath = context.nextFocusedIndexPath {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaylistCollectionViewCell", for: indexPath) as! PlaylistCollectionViewCell
+            cell.personImage.borderWidth = 4
+            cell.personImage.borderColor = UIColor.red
+        }
+        
     }
     
 }

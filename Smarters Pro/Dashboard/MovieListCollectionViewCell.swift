@@ -8,6 +8,5 @@
 import UIKit
 
 class MovieListCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var posterImageView: DesignableImage!
-    
+    @IBOutlet weak var posterImageView: UIImageView!
 }

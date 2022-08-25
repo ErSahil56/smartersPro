@@ -8,5 +8,5 @@ target 'Smarters Pro' do
   pod 'SwifterSwift/UIKit'
   pod 'Gradients'
   pod 'SDWebImage', '~> 5.0'
-
+  pod 'iOSDropDown'
 end

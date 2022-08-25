@@ -1,5 +1,6 @@
 PODS:
   - Gradients (0.3.0)
+  - iOSDropDown (0.4.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -7,20 +8,23 @@ PODS:
 
 DEPENDENCIES:
   - Gradients
+  - iOSDropDown
   - SDWebImage (~> 5.0)
   - SwifterSwift/UIKit
 
 SPEC REPOS:
   trunk:
     - Gradients
+    - iOSDropDown
     - SDWebImage
     - SwifterSwift
 
 SPEC CHECKSUMS:
   Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 6c67702c7beb8209636d848fe6000e4b3bc7a656
+PODFILE CHECKSUM: f322b9fa12364ed221126d41089b8db404b1b163
 
 COCOAPODS: 1.11.3

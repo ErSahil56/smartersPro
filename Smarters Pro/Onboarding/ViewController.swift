@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         self.userNameTextField.setLeftPaddingPoints(60)
         self.urlTextField.setLeftPaddingPoints(60)
         self.passwordTextField.setLeftPaddingPoints(60)
-//        ListUserImage.image = UIImage(named:"PersonList")
         anyNameTextField.attributedPlaceholder = NSAttributedString(
             string: "Anyname",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -61,8 +60,6 @@ class ViewController: UIViewController {
     }
     
     @objc func scrollToNextCell() {
-
-        //scroll to next cell
         let items = newItemScrollCollectionView.numberOfItems(inSection: 0)
         if (items - 1) == index {
             newItemScrollCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: UICollectionView.ScrollPosition.right, animated: true)
@@ -90,9 +87,6 @@ class ViewController: UIViewController {
 
     }
 
-    /**
-     call this method when collection view loaded
-     */
     func startTimer() {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true);

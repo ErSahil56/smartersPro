@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3Z-PN-MRy">
     <device id="appleTV" appearance="light"/>
     <dependencies>
+        <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,10 +15,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="MYS-Fv-1WN">
             <objects>
-                <viewController id="kNZ-E1-j9S" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL3-Rm-Ez1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="kNZ-E1-j9S" customClass="SplashViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7yc-2f-KjV"/>
                         <viewControllerLayoutGuide type="bottom" id="u7v-8g-Bsv"/>
@@ -29,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.12801817060000001" green="0.16834843159999999" blue="0.31766247749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.12941176470588234" green="0.16862745098039217" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,14 +62,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="3ie-YR-ab7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WL3-Rm-Ez1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1609" y="-948"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -515,10 +517,11 @@
             </objects>
             <point key="canvasLocation" x="7044" y="-948"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Playlist View Controller-->
         <scene sceneID="X46-y7-yVP">
             <objects>
-                <viewController id="ejp-28-R71" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4q-ua-L4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ChoosePlaylistViewController" id="ejp-28-R71" customClass="ChoosePlaylistViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iod-rh-jAv"/>
                         <viewControllerLayoutGuide type="bottom" id="r2D-xs-oKA"/>
@@ -529,6 +532,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykq-tv-FqC" customClass="GradientView" customModule="Smarters_Pro" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Press for more options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q0-LT-N04">
+                                        <rect key="frame" x="753" y="998" width="414" height="42"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2Q0-LT-N04" secondAttribute="bottom" constant="40" id="2nE-zY-muz"/>
+                                    <constraint firstItem="2Q0-LT-N04" firstAttribute="centerX" secondItem="Ykq-tv-FqC" secondAttribute="centerX" id="FCy-Wd-yD9"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" red="0.12801817060000001" green="0.16834843159999999" blue="0.31766247749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -545,57 +560,78 @@
                                 <rect key="frame" x="58" y="48" width="688" height="116"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-kE-mwW">
-                                <rect key="frame" x="698.5" y="280" width="523" height="66"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="57"/>
+                                <rect key="frame" x="675" y="280" width="570" height="80"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="57"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smarters Pro doesn't contain any playlist, You have to add your own playlist provided by your service provider." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-aN-6UL">
-                                <rect key="frame" x="229" y="357" width="1462" height="35"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <rect key="frame" x="141" y="371" width="1638" height="42"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6e-em-QOd">
-                                <rect key="frame" x="829.5" y="483" width="261" height="269"/>
-                                <color key="backgroundColor" red="0.1764705882352941" green="0.23529411764705882" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fny-Ek-XeC">
+                                <rect key="frame" x="130" y="503" width="1660" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="269" id="c5V-8l-JfT"/>
-                                    <constraint firstAttribute="width" constant="261" id="fhf-Yt-a4W"/>
+                                    <constraint firstAttribute="height" constant="320" id="dVp-lz-Zf9"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="plus"/>
-                            </button>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F1R-0m-Gur">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="HIc-6Z-ifK">
+                                        <rect key="frame" x="10" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DBo-06-hT0">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ejp-28-R71" id="NKQ-BL-Qav"/>
+                                    <outlet property="delegate" destination="ejp-28-R71" id="UYV-w7-jMC"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6a0-rC-LFa"/>
                         <constraints>
+                            <constraint firstItem="fny-Ek-XeC" firstAttribute="top" secondItem="yDV-aN-6UL" secondAttribute="bottom" constant="90" id="1S6-iu-we7"/>
                             <constraint firstItem="Ykq-tv-FqC" firstAttribute="leading" secondItem="lzf-b6-1tT" secondAttribute="leading" id="9KM-DN-nYD"/>
                             <constraint firstItem="uSL-kE-mwW" firstAttribute="top" secondItem="6a0-rC-LFa" secondAttribute="top" constant="220" id="BhG-bF-2eQ"/>
                             <constraint firstAttribute="bottom" secondItem="Ykq-tv-FqC" secondAttribute="bottom" id="F2S-9H-Xfy"/>
                             <constraint firstItem="zC3-k3-uoa" firstAttribute="top" secondItem="lzf-b6-1tT" secondAttribute="top" constant="48" id="ImQ-5Q-qdF"/>
-                            <constraint firstItem="u6e-em-QOd" firstAttribute="centerX" secondItem="lzf-b6-1tT" secondAttribute="centerX" id="TTy-ES-bVh"/>
+                            <constraint firstItem="fny-Ek-XeC" firstAttribute="leading" secondItem="6a0-rC-LFa" secondAttribute="leading" constant="50" id="Of3-TT-kXK"/>
+                            <constraint firstItem="6a0-rC-LFa" firstAttribute="trailing" secondItem="fny-Ek-XeC" secondAttribute="trailing" constant="50" id="Vg9-JO-bmv"/>
                             <constraint firstItem="uSL-kE-mwW" firstAttribute="centerX" secondItem="lzf-b6-1tT" secondAttribute="centerX" id="WzE-aX-557"/>
                             <constraint firstAttribute="trailing" secondItem="Ykq-tv-FqC" secondAttribute="trailing" id="dLW-Rb-8vP"/>
-                            <constraint firstItem="u6e-em-QOd" firstAttribute="top" secondItem="yDV-aN-6UL" secondAttribute="bottom" constant="91" id="oLY-Dj-0ZR"/>
                             <constraint firstItem="yDV-aN-6UL" firstAttribute="centerX" secondItem="lzf-b6-1tT" secondAttribute="centerX" id="pIV-cV-G8h"/>
                             <constraint firstItem="Ykq-tv-FqC" firstAttribute="top" secondItem="lzf-b6-1tT" secondAttribute="top" id="qMS-g2-fyF"/>
                             <constraint firstItem="zC3-k3-uoa" firstAttribute="leading" secondItem="lzf-b6-1tT" secondAttribute="leading" constant="58" id="snY-Xz-0G2"/>
                             <constraint firstItem="yDV-aN-6UL" firstAttribute="top" secondItem="uSL-kE-mwW" secondAttribute="bottom" constant="11" id="vO6-YF-ies"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cnw-78-1Gj"/>
+                    <connections>
+                        <outlet property="choosePlaylistCollectionView" destination="fny-Ek-XeC" id="C4Y-nH-BDr"/>
+                        <outlet property="disclaimerLabel" destination="yDV-aN-6UL" id="aWh-fR-d0Y"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F4q-ua-L4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="514"/>
+            <point key="canvasLocation" x="3741" y="514"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j3r-jK-GHd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A3Z-PN-MRy" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h80-3j-mxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="A3Z-PN-MRy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QqU-9d-kcE">
-                        <rect key="frame" x="0.0" y="60" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -603,14 +639,13 @@
                         <segue destination="kNZ-E1-j9S" kind="relationship" relationship="rootViewController" id="CEb-VR-CCi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h80-3j-mxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-468" y="-948"/>
         </scene>
         <!--Playlist Type View Controller-->
         <scene sceneID="RQ2-tA-Rkh">
             <objects>
-                <viewController id="6Jy-hY-oaT" customClass="PlaylistTypeViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaylistTypeViewController" id="6Jy-hY-oaT" customClass="PlaylistTypeViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wtB-xL-GP6"/>
                         <viewControllerLayoutGuide type="bottom" id="0Oe-Ef-eug"/>
@@ -832,91 +867,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-Va-HDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="514"/>
-        </scene>
-        <!--Choose Playlist View Controller-->
-        <scene sceneID="JUl-vf-gPE">
-            <objects>
-                <viewController id="H7M-6X-qqA" customClass="ChoosePlaylistViewController" customModule="Smarters_Pro" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CEx-eL-Tmj"/>
-                        <viewControllerLayoutGuide type="bottom" id="dDt-9J-geg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sA1-wx-OIA">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-KL-KAC" customClass="GradientView" customModule="Smarters_Pro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.12801817060000001" green="0.16834843159999999" blue="0.31766247749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="FW3-K6-MN3">
-                                <rect key="frame" x="58" y="48" width="688" height="116"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a1-wC-T1E">
-                                <rect key="frame" x="794.5" y="280" width="331" height="42"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="glZ-2g-lGW">
-                                <rect key="frame" x="100" y="415" width="1720" height="572"/>
-                                <color key="backgroundColor" red="0.57254901960000004" green="0.50588235290000005" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="40" minimumInteritemSpacing="40" id="TU1-uo-Wvh">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="H7M-6X-qqA" id="Q0h-hn-nXu"/>
-                                    <outlet property="delegate" destination="H7M-6X-qqA" id="7xM-Br-u80"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Press for more options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-5y-lQ7">
-                                <rect key="frame" x="834" y="1037" width="252" height="23"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" red="0.55686274509803924" green="0.61176470588235299" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="uTV-1L-Y0q"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="uLV-KL-KAC" secondAttribute="trailing" id="1Xt-XO-cV2"/>
-                            <constraint firstItem="uLV-KL-KAC" firstAttribute="leading" secondItem="sA1-wx-OIA" secondAttribute="leading" id="6Xn-dy-6S2"/>
-                            <constraint firstItem="FW3-K6-MN3" firstAttribute="top" secondItem="sA1-wx-OIA" secondAttribute="top" constant="48" id="BTi-az-6iM"/>
-                            <constraint firstItem="hjj-5y-lQ7" firstAttribute="centerX" secondItem="sA1-wx-OIA" secondAttribute="centerX" id="CZk-vE-Uoj"/>
-                            <constraint firstItem="glZ-2g-lGW" firstAttribute="top" secondItem="8a1-wC-T1E" secondAttribute="bottom" constant="93" id="LNX-WX-uI7"/>
-                            <constraint firstItem="8a1-wC-T1E" firstAttribute="centerX" secondItem="sA1-wx-OIA" secondAttribute="centerX" id="Owl-QZ-wUA"/>
-                            <constraint firstItem="uLV-KL-KAC" firstAttribute="top" secondItem="sA1-wx-OIA" secondAttribute="top" id="PRv-br-puO"/>
-                            <constraint firstAttribute="trailing" secondItem="glZ-2g-lGW" secondAttribute="trailing" constant="100" id="bvh-9w-Sko"/>
-                            <constraint firstItem="hjj-5y-lQ7" firstAttribute="top" secondItem="glZ-2g-lGW" secondAttribute="bottom" constant="50" id="cpO-nY-tly"/>
-                            <constraint firstAttribute="bottom" secondItem="hjj-5y-lQ7" secondAttribute="bottom" constant="20" id="jO3-KB-53m"/>
-                            <constraint firstItem="glZ-2g-lGW" firstAttribute="leading" secondItem="sA1-wx-OIA" secondAttribute="leading" constant="100" id="kz2-Cc-tPm"/>
-                            <constraint firstAttribute="bottom" secondItem="uLV-KL-KAC" secondAttribute="bottom" id="rx9-M1-vLQ"/>
-                            <constraint firstItem="8a1-wC-T1E" firstAttribute="top" secondItem="uTV-1L-Y0q" secondAttribute="top" constant="220" id="wN5-i1-lbT"/>
-                            <constraint firstItem="FW3-K6-MN3" firstAttribute="leading" secondItem="sA1-wx-OIA" secondAttribute="leading" constant="58" id="wnv-Ha-3a1"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="choosePlaylistCollectionView" destination="glZ-2g-lGW" id="gni-Hx-sHw"/>
-                        <outlet property="collectionViewLeadingConstraints" destination="kz2-Cc-tPm" id="wUT-IP-wAe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zSB-l2-SRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6699" y="461"/>
+            <point key="canvasLocation" x="6421" y="514"/>
         </scene>
     </scenes>
     <resources>
@@ -927,7 +878,6 @@
         <image name="connectVpn" width="25" height="31"/>
         <image name="logo" width="487" height="129"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="plus" width="148" height="147"/>
         <image name="profile" width="30" height="24"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
