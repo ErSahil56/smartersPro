@@ -9,6 +9,7 @@ import UIKit
 
 class PlaylistCollectionViewCell: UICollectionViewCell {
   
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     

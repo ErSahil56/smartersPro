@@ -53,9 +53,8 @@ class ViewController: UIViewController {
         startTimer()
     }
 
-
     @IBAction func addUserAction(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController")as! DashboardViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

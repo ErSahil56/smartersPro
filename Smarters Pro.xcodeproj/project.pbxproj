@@ -121,6 +121,24 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		384C012028B7EA0000D42E57 /* ChoosePlayList */ = {
+			isa = PBXGroup;
+			children = (
+				6B826EF628AE07FA00BB1144 /* ChoosePlaylistViewController.swift */,
+				6B826EF128ADFCF400BB1144 /* Cell */,
+			);
+			path = ChoosePlayList;
+			sourceTree = "<group>";
+		};
+		384C012128B7EA0F00D42E57 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B313274289C1D12006C23B2 /* ViewController.swift */,
+				6B3132A7289EB588006C23B2 /* Cell */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		6B313266289C1D12006C23B2 = {
 			isa = PBXGroup;
 			children = (
@@ -171,24 +189,22 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		6B3132A7289EB588006C23B2 /* LoginCell */ = {
+		6B3132A7289EB588006C23B2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				6B3132A8289EB601006C23B2 /* NewItemCollectionViewCell.swift */,
 				6B3132A9289EB601006C23B2 /* NewItemCollectionViewCell.xib */,
 			);
-			path = LoginCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		6B6FDCD628A36CEB0006C811 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				388690FE28B7857400C0E63D /* SplashViewController.swift */,
-				6B826EF628AE07FA00BB1144 /* ChoosePlaylistViewController.swift */,
+				384C012028B7EA0000D42E57 /* ChoosePlayList */,
 				6BD2633028AAB60700C546A4 /* PlaylistTypeViewController.swift */,
-				6B313274289C1D12006C23B2 /* ViewController.swift */,
-				6B826EF128ADFCF400BB1144 /* ChoosePlaylistCell */,
-				6B3132A7289EB588006C23B2 /* LoginCell */,
+				384C012128B7EA0F00D42E57 /* Login */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -233,13 +249,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		6B826EF128ADFCF400BB1144 /* ChoosePlaylistCell */ = {
+		6B826EF128ADFCF400BB1144 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				6B826EF228ADFD2000BB1144 /* PlaylistCollectionViewCell.swift */,
 				6B826EF328ADFD2000BB1144 /* PlaylistCollectionViewCell.xib */,
 			);
-			path = ChoosePlaylistCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
