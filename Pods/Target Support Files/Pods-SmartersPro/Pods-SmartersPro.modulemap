@@ -1,0 +1,6 @@
+framework module Pods_SmartersPro {
+  umbrella header "Pods-SmartersPro-umbrella.h"
+
+  export *
+  module * { export * }
+}
