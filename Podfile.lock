@@ -1,22 +1,46 @@
 PODS:
+  - FocusTvButton (3.0.0)
+  - ParallaxView (3.1.2)
+  - PopupKit (3.1.1)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
   - SwifterSwift/UIKit (5.2.0)
+  - TvOSCustomizableTableViewCell (2.0.0):
+    - ZattooGradientView (~> 1.0.0)
+  - TvOSTextViewer (1.3.0)
+  - ZattooGradientView (1.0.0)
 
 DEPENDENCIES:
+  - FocusTvButton
+  - ParallaxView
+  - PopupKit
   - SDWebImage
   - SwifterSwift/UIKit
+  - TvOSCustomizableTableViewCell
+  - TvOSTextViewer
 
 SPEC REPOS:
   trunk:
+    - FocusTvButton
+    - ParallaxView
+    - PopupKit
     - SDWebImage
     - SwifterSwift
+    - TvOSCustomizableTableViewCell
+    - TvOSTextViewer
+    - ZattooGradientView
 
 SPEC CHECKSUMS:
+  FocusTvButton: 028a088a4a0ac382f2e3c0c45dbd2a420dee98af
+  ParallaxView: 1a97d3ff4752f1b1009b30c96235cee3221db012
+  PopupKit: e362ed92148d831a9c38a2bc7a25893e46d64c54
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  TvOSCustomizableTableViewCell: 50bcd0fe24f2f5360e5678a374a530cb5d41f182
+  TvOSTextViewer: c1a0c64286931e663d131dc680f908bcfa36e214
+  ZattooGradientView: 5ef6c93d60e080e7335d4e144d2ea7b623aa9b52
 
-PODFILE CHECKSUM: 928c267a398935ce45795ac79101197b58d0c001
+PODFILE CHECKSUM: d51bfb36f4f119437e2605bb412c4266ce7b1322
 
 COCOAPODS: 1.11.3

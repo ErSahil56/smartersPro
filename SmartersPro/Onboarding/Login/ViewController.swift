@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var anyNameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var urlTextField: UITextField!
@@ -35,6 +36,10 @@ class ViewController: UIViewController {
         let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "By using this application, you agree to the "))
         attributedString.append("Terms of Services".addUnderLine(fontAttribute: THFonts.appRegularFont.withSize(18.0)))
         termsButton.setAttributedTitle(attributedString, for: .normal)
+        
+        addFocusGuide(from: stackView, to: connectVPNButton, direction: .right)
+        addFocusGuide(from: connectVPNButton, to: stackView, direction: .left)
+        
     }
     
     func updateUI() {
@@ -64,8 +69,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addUserAction(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        guard let objDashboardView = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController() else { return }
+        self.navigationController?.pushViewController(objDashboardView, animated: true)
     }
     
 //    @IBAction func passwordSecureAction(_ sender: UIButton) {

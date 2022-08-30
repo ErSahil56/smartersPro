@@ -1,0 +1,6 @@
+framework module ZattooGradientView {
+  umbrella header "ZattooGradientView-umbrella.h"
+
+  export *
+  module * { export * }
+}

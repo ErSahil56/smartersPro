@@ -16,6 +16,7 @@ class NewItemCollectionViewCell: UICollectionViewCell {
     var currentPage = 0
     
     func updatePageContol() {
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.pageIndicatorTintColor = .white
         for subview in pageControl.subviews {
             guard let effectView = subview as? UIVisualEffectView else { continue }

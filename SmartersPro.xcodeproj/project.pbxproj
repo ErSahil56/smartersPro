@@ -17,6 +17,10 @@
 		384C012828BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */; };
 		384C012928BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */; };
 		388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388690FE28B7857400C0E63D /* SplashViewController.swift */; };
+		389E0D1828BE1E5A001A6DA4 /* PlaylistMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */; };
+		389E0D1928BE1E5A001A6DA4 /* PlaylistMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */; };
+		389E0D1C28BE246D001A6DA4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */; };
+		389E0D1D28BE246D001A6DA4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */; };
 		38CA4C9F28BA4912002BF4DC /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8D28BA4911002BF4DC /* Poppins-ExtraLight.ttf */; };
 		38CA4CA028BA4912002BF4DC /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8E28BA4911002BF4DC /* Poppins-ThinItalic.ttf */; };
 		38CA4CA128BA4912002BF4DC /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8F28BA4911002BF4DC /* Poppins-ExtraLightItalic.ttf */; };
@@ -35,6 +39,7 @@
 		38CA4CAE28BA4912002BF4DC /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C9C28BA4911002BF4DC /* Poppins-SemiBold.ttf */; };
 		38CA4CAF28BA4912002BF4DC /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C9D28BA4911002BF4DC /* Poppins-Italic.ttf */; };
 		38CA4CB028BA4912002BF4DC /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C9E28BA4911002BF4DC /* Poppins-MediumItalic.ttf */; };
+		38CA4CB228BCD178002BF4DC /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4CB128BCD177002BF4DC /* Dashboard.storyboard */; };
 		6B313273289C1D12006C23B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B313272289C1D12006C23B2 /* AppDelegate.swift */; };
 		6B313275289C1D12006C23B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B313274289C1D12006C23B2 /* ViewController.swift */; };
 		6B313278289C1D12006C23B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B313276289C1D12006C23B2 /* Main.storyboard */; };
@@ -69,6 +74,10 @@
 		384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		388690FE28B7857400C0E63D /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMenuViewController.swift; sourceTree = "<group>"; };
+		389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistMenuViewController.xib; sourceTree = "<group>"; };
+		389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		38CA4C8D28BA4911002BF4DC /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		38CA4C8E28BA4911002BF4DC /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		38CA4C8F28BA4911002BF4DC /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -87,6 +96,7 @@
 		38CA4C9C28BA4911002BF4DC /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		38CA4C9D28BA4911002BF4DC /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		38CA4C9E28BA4911002BF4DC /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		38CA4CB128BCD177002BF4DC /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		6B31326F289C1D12006C23B2 /* SmartersPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartersPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B313272289C1D12006C23B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B313274289C1D12006C23B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +149,6 @@
 				C18C5A03C7B9A00F221E9C83 /* Pods-SmartersPro.debug.xcconfig */,
 				AB41125A1B404C1D24AE3E83 /* Pods-SmartersPro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,6 +213,25 @@
 				384C012A28BA108000D42E57 /* Cell */,
 			);
 			path = PlaylistType;
+			sourceTree = "<group>";
+		};
+		389E0D1E28BE2BC4001A6DA4 /* PlayListMenu */ = {
+			isa = PBXGroup;
+			children = (
+				389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */,
+				389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */,
+				389E0D1F28BE2D07001A6DA4 /* Cell */,
+			);
+			path = PlayListMenu;
+			sourceTree = "<group>";
+		};
+		389E0D1F28BE2D07001A6DA4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */,
+				389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		38CA4C8C28BA4911002BF4DC /* Fonts */ = {
@@ -279,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				6B313276289C1D12006C23B2 /* Main.storyboard */,
+				38CA4CB128BCD177002BF4DC /* Dashboard.storyboard */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -296,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				388690FE28B7857400C0E63D /* SplashViewController.swift */,
+				389E0D1E28BE2BC4001A6DA4 /* PlayListMenu */,
 				384C012028B7EA0000D42E57 /* ChoosePlayList */,
 				384C012B28BA108600D42E57 /* PlaylistType */,
 				384C012128B7EA0F00D42E57 /* Login */,
@@ -389,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38CA4CAC28BA4912002BF4DC /* Poppins-Black.ttf in Resources */,
+				38CA4CB228BCD178002BF4DC /* Dashboard.storyboard in Resources */,
 				384C012528BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib in Resources */,
 				38CA4CA328BA4912002BF4DC /* Poppins-Light.ttf in Resources */,
 				38CA4CAF28BA4912002BF4DC /* Poppins-Italic.ttf in Resources */,
@@ -396,6 +427,7 @@
 				38CA4CB028BA4912002BF4DC /* Poppins-MediumItalic.ttf in Resources */,
 				6B6FDCDA28A36D3B0006C811 /* MovieListTableViewCell.xib in Resources */,
 				38CA4CA528BA4912002BF4DC /* Poppins-SemiBoldItalic.ttf in Resources */,
+				389E0D1D28BE246D001A6DA4 /* MenuTableViewCell.xib in Resources */,
 				6B31327D289C1D13006C23B2 /* LaunchScreen.storyboard in Resources */,
 				38CA4CA428BA4912002BF4DC /* Poppins-Medium.ttf in Resources */,
 				6B31327A289C1D13006C23B2 /* Assets.xcassets in Resources */,
@@ -410,6 +442,7 @@
 				38CA4CAE28BA4912002BF4DC /* Poppins-SemiBold.ttf in Resources */,
 				38CA4CA128BA4912002BF4DC /* Poppins-ExtraLightItalic.ttf in Resources */,
 				38CA4CA628BA4912002BF4DC /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				389E0D1928BE1E5A001A6DA4 /* PlaylistMenuViewController.xib in Resources */,
 				38CA4CA228BA4912002BF4DC /* Poppins-BoldItalic.ttf in Resources */,
 				6B6FDCE328A3756C0006C811 /* MovieItemHeaderTableViewCell.xib in Resources */,
 				38CA4CA028BA4912002BF4DC /* Poppins-ThinItalic.ttf in Resources */,
@@ -478,7 +511,9 @@
 				384C012428BA08F400D42E57 /* AddPlaylistCollectionViewCell.swift in Sources */,
 				3809217228B509BE00E5B4D7 /* AppConfig.swift in Sources */,
 				3809216F28B509BE00E5B4D7 /* THColors.swift in Sources */,
+				389E0D1C28BE246D001A6DA4 /* MenuTableViewCell.swift in Sources */,
 				6B3132AA289EB602006C23B2 /* NewItemCollectionViewCell.swift in Sources */,
+				389E0D1828BE1E5A001A6DA4 /* PlaylistMenuViewController.swift in Sources */,
 				6B6FDCDD28A370830006C811 /* MovieListCollectionViewCell.swift in Sources */,
 				3809217128B509BE00E5B4D7 /* UrlConfig.swift in Sources */,
 				3809217028B509BE00E5B4D7 /* THFonts.swift in Sources */,

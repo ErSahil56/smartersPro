@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PopupKit
 
 class ChoosePlaylistViewController: UIViewController {
     
@@ -46,6 +47,11 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
             cell.personImage.image = imageArray[indexPath.row]
             cell.nameLabel.text = userArray[indexPath.row]
             cell.containerView.borderWidth = 8
+            cell.buttonClicked = {
+                let menuController = PlaylistMenuViewController()
+//                self.view.addSubview(menuController.view)
+                self.present(menuController, animated: true, completion: nil)
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddPlaylistCollectionViewCell", for: indexPath) as! AddPlaylistCollectionViewCell
@@ -61,9 +67,10 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
             let objPlaylistType = self.storyboard?.instantiateViewController(withIdentifier: "PlaylistTypeViewController") as! PlaylistTypeViewController
             self.navigationController?.pushViewController(objPlaylistType, animated: true)
         } else {
-            let objDashboardView = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+            guard let objDashboardView = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController() else { return }
             self.navigationController?.pushViewController(objDashboardView, animated: true)
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

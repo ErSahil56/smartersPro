@@ -176,12 +176,24 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FocusTvButton/FocusTvButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ParallaxView/ParallaxView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PopupKit/PopupKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TvOSCustomizableTableViewCell/TvOSCustomizableTableViewCell.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TvOSTextViewer/TvOSTextViewer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZattooGradientView/ZattooGradientView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FocusTvButton/FocusTvButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ParallaxView/ParallaxView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PopupKit/PopupKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TvOSCustomizableTableViewCell/TvOSCustomizableTableViewCell.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TvOSTextViewer/TvOSTextViewer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZattooGradientView/ZattooGradientView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

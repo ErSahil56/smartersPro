@@ -15,4 +15,21 @@ class PlaylistCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var buttonClicked: (()->())?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(longPressGestureRecognizer:)))
+        longGesture.minimumPressDuration = 2.0
+        self.addGestureRecognizer(longGesture)
+    }
+    
+    @objc func longPress(longPressGestureRecognizer : UILongPressGestureRecognizer) {
+        
+        if longPressGestureRecognizer.state == .began {
+            self.buttonClicked?()
+        }
+        
+    }
+    
 }

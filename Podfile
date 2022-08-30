@@ -6,4 +6,8 @@ target 'SmartersPro' do
 
   pod 'SwifterSwift/UIKit'
   pod 'SDWebImage'
+  pod 'ParallaxView'
+  pod 'TvOSTextViewer'
+  pod 'FocusTvButton'
+  pod 'TvOSCustomizableTableViewCell'
 end

@@ -1,11 +1,11 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FocusTvButton" "${PODS_CONFIGURATION_BUILD_DIR}/ParallaxView" "${PODS_CONFIGURATION_BUILD_DIR}/PopupKit" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift" "${PODS_CONFIGURATION_BUILD_DIR}/TvOSCustomizableTableViewCell" "${PODS_CONFIGURATION_BUILD_DIR}/TvOSTextViewer" "${PODS_CONFIGURATION_BUILD_DIR}/ZattooGradientView"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift/SwifterSwift.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FocusTvButton/FocusTvButton.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ParallaxView/ParallaxView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PopupKit/PopupKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift/SwifterSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/TvOSCustomizableTableViewCell/TvOSCustomizableTableViewCell.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/TvOSTextViewer/TvOSTextViewer.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ZattooGradientView/ZattooGradientView.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -framework "ImageIO" -framework "SDWebImage" -framework "SwifterSwift"
+OTHER_LDFLAGS = $(inherited) -framework "FocusTvButton" -framework "Foundation" -framework "ImageIO" -framework "ParallaxView" -framework "PopupKit" -framework "SDWebImage" -framework "SwifterSwift" -framework "TvOSCustomizableTableViewCell" -framework "TvOSTextViewer" -framework "UIKit" -framework "ZattooGradientView"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
