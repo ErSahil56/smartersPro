@@ -85,12 +85,14 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
                 cell.containerView.borderWidth = 8
                 cell.containerView.borderColor = .clear
                 cell.containerView.backgroundColor = .clear
+                cell.containerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
             if indexPath.section == 1 {
                 let cell = collectionView.cellForItem(at: indexPath) as! AddPlaylistCollectionViewCell
                 cell.containerView.borderWidth = 8
                 cell.containerView.borderColor = .clear
                 cell.containerView.backgroundColor = .clear
+                cell.containerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }
         
@@ -100,12 +102,14 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
                 cell.containerView.borderWidth = 8
                 cell.containerView.borderColor = THColors.borderThemeColor
                 cell.containerView.backgroundColor = THColors.userSelectedColor
+                cell.containerView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
             }
             if indexPath.section == 1 {
                 let cell = collectionView.cellForItem(at: indexPath) as! AddPlaylistCollectionViewCell
                 cell.containerView.borderWidth = 8
                 cell.containerView.borderColor = THColors.borderThemeColor
                 cell.containerView.backgroundColor = THColors.userSelectedColor
+                cell.containerView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
             }
             
         }
