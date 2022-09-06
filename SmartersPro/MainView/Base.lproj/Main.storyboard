@@ -175,7 +175,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="j3K-ba-Qzp"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Playlist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFS-ne-foN">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Playlist Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFS-ne-foN">
                                                 <rect key="frame" x="0.0" y="0.0" width="575" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.28235294119999998" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,7 +208,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="aS5-oy-I75"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dle-Wn-Lga">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dle-Wn-Lga">
                                                 <rect key="frame" x="0.0" y="0.0" width="575" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.28235294119999998" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,7 +241,7 @@
                                                     <constraint firstAttribute="width" constant="26" id="YpB-Qi-rXy"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZW-Xz-Inx">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZW-Xz-Inx">
                                                 <rect key="frame" x="0.0" y="0.0" width="575" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.28235294119999998" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -274,7 +274,7 @@
                                                     <constraint firstAttribute="width" constant="27" id="vHq-IO-cvX"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Server Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="872-gn-aY2">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Server Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="872-gn-aY2">
                                                 <rect key="frame" x="0.0" y="0.0" width="575" height="75"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.28235294119999998" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -457,15 +457,15 @@
                                 <rect key="frame" x="58" y="56" width="688" height="116"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-kE-mwW">
-                                <rect key="frame" x="673.5" y="280" width="573" height="80"/>
+                                <rect key="frame" x="673.5" y="240" width="573" height="80"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="57"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmartersPro doesn't contain any playlist, You have to add your own playlist provided by your service provider." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-aN-6UL">
-                                <rect key="frame" x="141.5" y="371" width="1637" height="42"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="278" y="331" width="1364" height="35"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Press for more options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q0-LT-N04">
@@ -475,7 +475,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fny-Ek-XeC">
-                                <rect key="frame" x="130" y="503" width="1660" height="390"/>
+                                <rect key="frame" x="130" y="456" width="1660" height="390"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="390" id="dVp-lz-Zf9"/>
@@ -507,7 +507,7 @@
                             <constraint firstItem="fny-Ek-XeC" firstAttribute="top" secondItem="yDV-aN-6UL" secondAttribute="bottom" constant="90" id="1S6-iu-we7"/>
                             <constraint firstAttribute="bottom" secondItem="2Q0-LT-N04" secondAttribute="bottom" constant="30" id="5XV-Xd-s7d"/>
                             <constraint firstItem="Ykq-tv-FqC" firstAttribute="leading" secondItem="lzf-b6-1tT" secondAttribute="leading" id="9KM-DN-nYD"/>
-                            <constraint firstItem="uSL-kE-mwW" firstAttribute="top" secondItem="6a0-rC-LFa" secondAttribute="top" constant="220" id="BhG-bF-2eQ"/>
+                            <constraint firstItem="uSL-kE-mwW" firstAttribute="top" secondItem="6a0-rC-LFa" secondAttribute="top" constant="180" id="BhG-bF-2eQ"/>
                             <constraint firstAttribute="bottom" secondItem="Ykq-tv-FqC" secondAttribute="bottom" id="F2S-9H-Xfy"/>
                             <constraint firstItem="zC3-k3-uoa" firstAttribute="top" secondItem="lzf-b6-1tT" secondAttribute="top" constant="56" id="ImQ-5Q-qdF"/>
                             <constraint firstItem="fny-Ek-XeC" firstAttribute="leading" secondItem="6a0-rC-LFa" secondAttribute="leading" constant="50" id="Of3-TT-kXK"/>
@@ -578,13 +578,13 @@
                                 <rect key="frame" x="58" y="56" width="688" height="116"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-5W-ysC">
-                                <rect key="frame" x="800.5" y="280" width="319" height="68"/>
+                                <rect key="frame" x="800.5" y="240" width="319" height="68"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="48"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ezk-Z0-LBO">
-                                <rect key="frame" x="280" y="398" width="1360" height="470"/>
+                                <rect key="frame" x="280" y="358" width="1360" height="470"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="470" id="DfY-7f-xfO"/>
@@ -611,7 +611,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-I5-SeK">
-                                <rect key="frame" x="843.5" y="918" width="233" height="80"/>
+                                <rect key="frame" x="843.5" y="878" width="233" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
@@ -646,7 +646,7 @@
                             <constraint firstItem="Ezk-Z0-LBO" firstAttribute="top" secondItem="hYx-5W-ysC" secondAttribute="bottom" constant="50" id="eqn-Wp-mIW"/>
                             <constraint firstItem="Ezk-Z0-LBO" firstAttribute="leading" secondItem="KtA-Z4-AZR" secondAttribute="leading" constant="200" id="gcC-u7-lMQ"/>
                             <constraint firstItem="Ezk-Z0-LBO" firstAttribute="centerX" secondItem="roQ-kb-CTQ" secondAttribute="centerX" id="j3n-qD-fY4"/>
-                            <constraint firstItem="hYx-5W-ysC" firstAttribute="top" secondItem="KtA-Z4-AZR" secondAttribute="top" constant="220" id="kvH-a4-CJP"/>
+                            <constraint firstItem="hYx-5W-ysC" firstAttribute="top" secondItem="KtA-Z4-AZR" secondAttribute="top" constant="180" id="kvH-a4-CJP"/>
                             <constraint firstItem="1jd-cV-LnJ" firstAttribute="top" secondItem="roQ-kb-CTQ" secondAttribute="top" id="qLh-ez-5xv"/>
                             <constraint firstAttribute="bottom" secondItem="1jd-cV-LnJ" secondAttribute="bottom" id="tM7-ja-XfD"/>
                             <constraint firstItem="Jph-I5-SeK" firstAttribute="top" secondItem="Ezk-Z0-LBO" secondAttribute="bottom" constant="50" id="xVF-8A-lq8"/>

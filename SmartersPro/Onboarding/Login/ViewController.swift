@@ -153,25 +153,61 @@ extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
         
         DispatchQueue.main.async {
             
-            self.anyNameTextField.attributedPlaceholder = NSAttributedString(
-                string: "Playlist Name",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-            )
+            if context.previouslyFocusedView == self.anyNameTextField {
+                self.anyNameTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Playlist Name",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+                )
+            }
             
-            self.userNameTextField.attributedPlaceholder = NSAttributedString(
-                string: "Username",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-            )
+            if context.nextFocusedView == self.anyNameTextField {
+                self.anyNameTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Playlist Name",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
+                )
+            }
             
-            self.passwordTextField.attributedPlaceholder = NSAttributedString(
-                string: "Password",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-            )
+            if context.previouslyFocusedView == self.userNameTextField {
+                self.userNameTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Username",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+                )
+            }
             
-            self.urlTextField.attributedPlaceholder = NSAttributedString(
-                string: "Server Address",
-                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-            )
+            if context.nextFocusedView == self.userNameTextField {
+                self.userNameTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Username",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
+                )
+            }
+            
+            if context.previouslyFocusedView == self.passwordTextField {
+                self.passwordTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Password",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+                )
+            }
+            
+            if context.nextFocusedView == self.passwordTextField {
+                self.passwordTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Password",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
+                )
+            }
+            
+            if context.previouslyFocusedView == self.urlTextField {
+                self.urlTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Server Address",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+                )
+            }
+            
+            if context.nextFocusedView == self.urlTextField {
+                self.urlTextField.attributedPlaceholder = NSAttributedString(
+                    string: "Server Address",
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black]
+                )
+            }
             
         }
 

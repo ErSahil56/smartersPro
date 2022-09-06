@@ -21,6 +21,9 @@
 		389E0D1928BE1E5A001A6DA4 /* PlaylistMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */; };
 		389E0D1C28BE246D001A6DA4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */; };
 		389E0D1D28BE246D001A6DA4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */; };
+		38A222B028BF839A00239BFD /* SideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A222AE28BF839A00239BFD /* SideTableViewCell.swift */; };
+		38A222B128BF839A00239BFD /* SideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A222AF28BF839A00239BFD /* SideTableViewCell.xib */; };
+		38BC52E228BF6896008A3A9C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC52E128BF6896008A3A9C /* SideMenuViewController.swift */; };
 		38CA4C9F28BA4912002BF4DC /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8D28BA4911002BF4DC /* Poppins-ExtraLight.ttf */; };
 		38CA4CA028BA4912002BF4DC /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8E28BA4911002BF4DC /* Poppins-ThinItalic.ttf */; };
 		38CA4CA128BA4912002BF4DC /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA4C8F28BA4911002BF4DC /* Poppins-ExtraLightItalic.ttf */; };
@@ -78,6 +81,9 @@
 		389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistMenuViewController.xib; sourceTree = "<group>"; };
 		389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		38A222AE28BF839A00239BFD /* SideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTableViewCell.swift; sourceTree = "<group>"; };
+		38A222AF28BF839A00239BFD /* SideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideTableViewCell.xib; sourceTree = "<group>"; };
+		38BC52E128BF6896008A3A9C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		38CA4C8D28BA4911002BF4DC /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		38CA4C8E28BA4911002BF4DC /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		38CA4C8F28BA4911002BF4DC /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -234,6 +240,37 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		38A222B228BF83A200239BFD /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				38BC52E128BF6896008A3A9C /* SideMenuViewController.swift */,
+				38A222B328BF83A900239BFD /* Cell */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		38A222B328BF83A900239BFD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				38A222AE28BF839A00239BFD /* SideTableViewCell.swift */,
+				38A222AF28BF839A00239BFD /* SideTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		38BC52E028BF6606008A3A9C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B6FDCD728A36D3B0006C811 /* MovieListTableViewCell.swift */,
+				6B6FDCD828A36D3B0006C811 /* MovieListTableViewCell.xib */,
+				6B6FDCDB28A370830006C811 /* MovieListCollectionViewCell.swift */,
+				6B6FDCDC28A370830006C811 /* MovieListCollectionViewCell.xib */,
+				6B6FDCE028A3756C0006C811 /* MovieItemHeaderTableViewCell.swift */,
+				6B6FDCE128A3756C0006C811 /* MovieItemHeaderTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		38CA4C8C28BA4911002BF4DC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +320,7 @@
 				6B313272289C1D12006C23B2 /* AppDelegate.swift */,
 				6B3132A1289C1D3F006C23B2 /* Extension */,
 				3809216828B509BE00E5B4D7 /* Config */,
+				38A222B228BF83A200239BFD /* SideMenu */,
 				6B6FDCD628A36CEB0006C811 /* Onboarding */,
 				6B6FDCDF28A375230006C811 /* Dashboard */,
 				6B3132A2289C212B006C23B2 /* MainView */,
@@ -337,12 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				6B6FDCD428A0EF980006C811 /* DashboardViewController.swift */,
-				6B6FDCD728A36D3B0006C811 /* MovieListTableViewCell.swift */,
-				6B6FDCD828A36D3B0006C811 /* MovieListTableViewCell.xib */,
-				6B6FDCDB28A370830006C811 /* MovieListCollectionViewCell.swift */,
-				6B6FDCDC28A370830006C811 /* MovieListCollectionViewCell.xib */,
-				6B6FDCE028A3756C0006C811 /* MovieItemHeaderTableViewCell.swift */,
-				6B6FDCE128A3756C0006C811 /* MovieItemHeaderTableViewCell.xib */,
+				38BC52E028BF6606008A3A9C /* Cells */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -432,6 +465,7 @@
 				38CA4CA428BA4912002BF4DC /* Poppins-Medium.ttf in Resources */,
 				6B31327A289C1D13006C23B2 /* Assets.xcassets in Resources */,
 				6B6FDCDE28A370830006C811 /* MovieListCollectionViewCell.xib in Resources */,
+				38A222B128BF839A00239BFD /* SideTableViewCell.xib in Resources */,
 				38CA4CA928BA4912002BF4DC /* Poppins-Regular.ttf in Resources */,
 				6B3132AB289EB602006C23B2 /* NewItemCollectionViewCell.xib in Resources */,
 				38CA4C9F28BA4912002BF4DC /* Poppins-ExtraLight.ttf in Resources */,
@@ -519,7 +553,9 @@
 				3809217028B509BE00E5B4D7 /* THFonts.swift in Sources */,
 				384C012828BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift in Sources */,
 				388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */,
+				38A222B028BF839A00239BFD /* SideTableViewCell.swift in Sources */,
 				6B313273289C1D12006C23B2 /* AppDelegate.swift in Sources */,
+				38BC52E228BF6896008A3A9C /* SideMenuViewController.swift in Sources */,
 				6B6FDCD928A36D3B0006C811 /* MovieListTableViewCell.swift in Sources */,
 				6B3132A0289C1D3A006C23B2 /* GradientView+Extension.swift in Sources */,
 				3809216728B509AC00E5B4D7 /* ViewExtensions.swift in Sources */,

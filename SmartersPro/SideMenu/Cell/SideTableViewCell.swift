@@ -1,14 +1,15 @@
 //
-//  MenuTableViewCell.swift
+//  SideTableViewCell.swift
 //  SmartersPro
 //
-//  Created by Sahil Garg on 30/08/22.
+//  Created by Sahil Garg on 31/08/22.
 //
 
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+class SideTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var menuLabel: UILabel!
     @IBOutlet weak var menuImage: UIImageView!
     
@@ -16,5 +17,5 @@ class MenuTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
 }

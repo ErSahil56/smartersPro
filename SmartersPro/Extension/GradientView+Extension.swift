@@ -125,4 +125,10 @@ class GradientView: UIView {
         installGradient()
         updateGradient()
     }
+    
+    func layoutGradient() {
+        installGradient()
+        updateGradient()
+    }
+    
 }
