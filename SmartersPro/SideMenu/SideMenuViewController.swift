@@ -30,7 +30,7 @@ class SideMenuViewController: UIViewController, UISearchResultsUpdating {
         super.viewDidLoad()
         splitViewController?.maximumPrimaryColumnWidth = CGFloat(MAXFLOAT)
         splitViewController?.preferredPrimaryColumnWidthFraction = 0.2
-        sideTableView.allowsSelection = false
+        sideTableView.allowsSelection = true
         sideTableView.register(UINib(nibName: "SideTableViewCell", bundle: nil), forCellReuseIdentifier: "SideTableViewCell")
         sideTableView.contentInsetAdjustmentBehavior = .never
         sideTableView.insetsContentViewsToSafeArea = false
@@ -135,15 +135,23 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
-//        if let vc = self.splitViewController?.viewControllers[1] {
-//            self.showingFullWidth = true
-//
-//            self.setNeedsFocusUpdate()
-//            self.updateFocusIfNeeded()
-//
-//            vc.setNeedsFocusUpdate()
-//            vc.updateFocusIfNeeded()
-//        }
+        if selectedIndex == 0 {
+            let watchTv = WatchTVViewController()
+            self.splitViewController?.showDetailViewController(watchTv, sender: self)
+        }
+        if selectedIndex == 1 {
+            if let dashboard = UIStoryboard.init(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController {
+                dashboard.dashType = .movies
+                self.splitViewController?.showDetailViewController(dashboard, sender: self)
+                
+            }
+        }
+        if selectedIndex == 2 {
+            if let dashboard = UIStoryboard.init(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController {
+                dashboard.dashType = .series
+                self.splitViewController?.showDetailViewController(dashboard, sender: self)
+            }
+        }
     }
     
 }

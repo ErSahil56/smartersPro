@@ -67,7 +67,7 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
             let objPlaylistType = self.storyboard?.instantiateViewController(withIdentifier: "PlaylistTypeViewController") as! PlaylistTypeViewController
             self.navigationController?.pushViewController(objPlaylistType, animated: true)
         } else {
-            guard let objDashboardView = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController() else { return }
+            guard let objDashboardView = UIStoryboard(name: "Tabbar", bundle: nil).instantiateInitialViewController() else { return }
             self.navigationController?.pushViewController(objDashboardView, animated: true)
         }
         

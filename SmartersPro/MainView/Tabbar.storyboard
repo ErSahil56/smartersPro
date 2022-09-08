@@ -139,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="RXX-GZ-Dwm" id="WdI-tO-5ks"/>
                         <outlet property="gradientView" destination="6YL-Ln-5lx" id="zvA-MF-Rv6"/>
                         <outlet property="movieListTableView" destination="gwl-Ta-HW0" id="t1v-xX-YtT"/>
                         <outlet property="sortButton" destination="AB6-J9-U1z" id="iX4-hs-xyD"/>

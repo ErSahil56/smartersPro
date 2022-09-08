@@ -7,15 +7,24 @@
 
 import UIKit
 
+enum DashType {
+    case movies
+    case series
+}
+
 class DashboardViewController: UIViewController {
 
     @IBOutlet weak var movieListTableView: UITableView!
     @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var sortButton: UIButton!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     private var storedOffsets = [Int: CGFloat]()
     
-    var header = ["Similar Category","Latest Movies","Action Movies","SuperNatural Movies"]
+    var dashType: DashType = .movies
+    
+    var headerMovies = ["Similar Category","Latest Movies","Action Movies","SuperNatural Movies"]
+    var headerSeries = ["Recently Added","Latest Series","Action Series","SuperNatural Series"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +48,12 @@ class DashboardViewController: UIViewController {
         
         addFocusGuide(from: movieListTableView, to: sortButton, direction: .top)
         addFocusGuide(from: sortButton, to: movieListTableView, direction: .bottom)
+        
+        if dashType == .movies {
+            categoryLabel.text = "Movies"
+        } else {
+            categoryLabel.text = "Series"
+        }
         
     }
     
@@ -69,11 +84,14 @@ class DashboardViewController: UIViewController {
 }
 
 //MARK: - UITABLEVIEW METHODS
-
 extension DashboardViewController: UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return header.count
+        if dashType == .movies {
+            return headerMovies.count
+        } else {
+            return headerSeries.count
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,7 +111,11 @@ extension DashboardViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "MovieItemHeaderTableViewCell") as! MovieItemHeaderTableViewCell
-        headerCell.headerTitle.text = header[section]
+        if dashType == .movies {
+            headerCell.headerTitle.text = headerMovies[section]
+        } else {
+            headerCell.headerTitle.text = headerSeries[section]
+        }
         headerView.addSubview(headerCell)
         return headerView
     }

@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addUserAction(_ sender: UIButton) {
-        guard let objDashboardView = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController() else { return }
+        guard let objDashboardView = UIStoryboard(name: "Tabbar", bundle: nil).instantiateInitialViewController() else { return }
         self.navigationController?.pushViewController(objDashboardView, animated: true)
     }
     
