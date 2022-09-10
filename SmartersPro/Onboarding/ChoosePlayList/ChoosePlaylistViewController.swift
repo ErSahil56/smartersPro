@@ -48,8 +48,11 @@ extension ChoosePlaylistViewController : UICollectionViewDelegateFlowLayout, UIC
             cell.nameLabel.text = userArray[indexPath.row]
             cell.containerView.borderWidth = 8
             cell.buttonClicked = {
-                let menuController = PlaylistMenuViewController()
-//                self.view.addSubview(menuController.view)
+                let menuController = PopUpViewController()
+                menuController.popViewType = .playlistMenuOptions
+                menuController.cellIndexClicked = { index in
+                    print(index)
+                }
                 self.present(menuController, animated: true, completion: nil)
             }
             return cell

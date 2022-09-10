@@ -15,15 +15,20 @@ class SideMenuViewController: UIViewController, UISearchResultsUpdating {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
     
-    var showingFullWidth = true
+    static var initialPhase = true
+    
+    var showDetailController = true
     var selectedIndex = 1
     
     var arrayMenu = ["Watch tv", "Movies", "Series", "Live With EPG", "Catach Up", "My Recordings", "Radio", "Notification", "Settings"]
     var arrayImages = ["tvmenu", "moviemenu", "seriesmenu", "epgmenu", "catchmenu", "voicemenu", "radiomenu", "notificationmenu", "settingsmenu"]
-    
+     
     override var preferredFocusedView: UIView? {
-        print("preferredFocusedView preferredFocusedView")
-        return self.sideTableView
+        if showDetailController {
+            return self.splitViewController?.viewControllers[1].view
+        } else {
+            return self.sideTableView
+        }
     }
     
     override func viewDidLoad() {
@@ -37,13 +42,31 @@ class SideMenuViewController: UIViewController, UISearchResultsUpdating {
         sideTableView.insetsLayoutMarginsFromSafeArea = false
         sideTableView.preservesSuperviewLayoutMargins = false
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateUIOnSidebar(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
-        sideTableView.selectRow(at: IndexPath(row: selectedIndex, section: 0), animated: false, scrollPosition: UITableView.ScrollPosition.middle)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.updateUIOnSidebar(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
+        sideTableView.selectRow(at: IndexPath(row: selectedIndex, section: 0), animated: false, scrollPosition: UITableView.ScrollPosition.none)
+        self.updateUI()
     }
     
-    @objc func updateUIOnSidebar(notification: Notification) {
-        showingFullWidth.toggle()
-        if showingFullWidth {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if !SideMenuViewController.initialPhase {
+            if self.splitViewController?.preferredPrimaryColumnWidthFraction == 0.2 {
+                showDetailController = false
+            } else {
+                showDetailController = true
+            }
+            self.updateUI()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
+    }
+    
+    func updateUI() {
+        if !showDetailController {
             searchButton.setTitle("Master Search", for: .normal)
         } else {
             searchButton.setTitle("", for: .normal)
@@ -51,6 +74,10 @@ class SideMenuViewController: UIViewController, UISearchResultsUpdating {
         sideTableView.selectRow(at: IndexPath(row: selectedIndex, section: 0), animated: false, scrollPosition: UITableView.ScrollPosition.top)
         sideTableView.reloadData()
     }
+    
+//    @objc func updateUIOnSidebar(notification: Notification) {
+//        self.updateUI()
+//    }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
@@ -67,6 +94,16 @@ class SideMenuViewController: UIViewController, UISearchResultsUpdating {
         print(searchController.searchBar.text as Any)
     }
     
+    @IBAction func accountButtonPressed(_ sender: UIButton) {
+        let menuController = PopUpViewController()
+        menuController.popViewType = .sidebarSettings
+        menuController.cellIndexClicked = { index in
+            print(index)
+        }
+        self.present(menuController, animated: true, completion: nil)
+    }
+    
+    
 }
 
 //MARK: - UITABLEVIEW METHODS
@@ -79,10 +116,10 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SideTableViewCell") as! SideTableViewCell
-        
         cell.selectedView.isHidden = true
-        if showingFullWidth {
+        if !showDetailController {
             cell.menuLabel.text = arrayMenu[indexPath.row]
+            cell.selectedView.isHidden = true
             cell.menuImage.image = UIImage(named: arrayImages[indexPath.row])
         } else {
             cell.menuLabel.text = ""
@@ -127,7 +164,7 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
     
     func indexPathForPreferredFocusedView(in tableView: UITableView) -> IndexPath? {
         
-        if showingFullWidth {
+        if showDetailController {
             return IndexPath(row: selectedIndex, section: 0)
         }
         return nil
@@ -136,11 +173,13 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         if selectedIndex == 0 {
+            showDetailController = true
             let watchTv = WatchTVViewController()
             self.splitViewController?.showDetailViewController(watchTv, sender: self)
         }
         if selectedIndex == 1 {
             if let dashboard = UIStoryboard.init(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController {
+                showDetailController = true
                 dashboard.dashType = .movies
                 self.splitViewController?.showDetailViewController(dashboard, sender: self)
                 
@@ -148,10 +187,19 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
         }
         if selectedIndex == 2 {
             if let dashboard = UIStoryboard.init(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController {
+                showDetailController = true
                 dashboard.dashType = .series
                 self.splitViewController?.showDetailViewController(dashboard, sender: self)
             }
         }
+        if selectedIndex == 8 {
+            let settingsvc = SettingsViewController()
+//            self.navigationController?.pushViewController(settingsvc, animated: true)
+            self.splitViewController?.showDetailViewController(settingsvc, sender: self)
+        }
+        self.updateUI()
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
     }
     
 }
@@ -162,18 +210,12 @@ extension SideMenuViewController {
         
         super.didUpdateFocus(in: context, with: coordinator)
         
-        if let splitView = self.view {
-            if let target = context.previouslyFocusedView?.isDescendant(of: splitView) {
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NotificationIdentifier"), object: nil, userInfo: nil)
-                print(target)
-                print("asfdahifabhfabih")
+        UIView.animate(withDuration: 0.5) { () -> Void in
+            DispatchQueue.main.async {
+                self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.2
             }
         }
         
-        UIView.animate(withDuration: 0.5) { () -> Void in
-            self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.2
-        }
-            
         if context.previouslyFocusedView == searchButton {
             searchButton.transform = CGAffineTransform.init(scaleX: 1.0, y: 1.0)
             searchView?.backgroundColor = "#1E2D53"

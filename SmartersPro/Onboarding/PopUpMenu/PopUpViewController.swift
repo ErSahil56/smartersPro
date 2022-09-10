@@ -7,9 +7,19 @@
 
 import UIKit
 
-class PlaylistMenuViewController: UIViewController {
+enum PopUPViewType {
+    case playlistMenuOptions
+    case sidebarSettings
+}
+
+class PopUpViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    
+    var popViewType: PopUPViewType = .playlistMenuOptions
+    
+    var cellIndexClicked: ((Int)->())?
     
     var arrayMenu = ["Edit", "Delete"]
     var arrayImages = ["editMenu", "deleteMenu"]
@@ -19,10 +29,19 @@ class PlaylistMenuViewController: UIViewController {
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuTableViewCell")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if popViewType == .sidebarSettings {
+            arrayMenu = ["My Account","Switch User","Add User","Exit"]
+            arrayImages = ["accountSideMenu","swapSideMenu","addUserSideMenu","exitSideMenu"]
+        }
+        self.tableViewHeight.constant = CGFloat(arrayMenu.count * 55 + 20)
+        self.tableView.reloadData()
+    }
 }
 
 //MARK: - UITABLEVIEW METHODS
-extension PlaylistMenuViewController:  UITableViewDataSource, UITableViewDelegate {
+extension PopUpViewController:  UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayMenu.count

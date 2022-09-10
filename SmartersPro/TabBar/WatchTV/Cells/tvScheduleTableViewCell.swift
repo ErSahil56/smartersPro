@@ -9,6 +9,9 @@ import UIKit
 
 class tvScheduleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var scheduleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

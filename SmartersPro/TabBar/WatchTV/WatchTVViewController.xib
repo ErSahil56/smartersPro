@@ -15,7 +15,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WatchTVViewController" customModule="SmartersPro" customModuleProvider="target">
             <connections>
+                <outlet property="categoryTableView" destination="wFx-7N-Clt" id="pVj-gO-7l4"/>
+                <outlet property="categoryView" destination="IeI-ha-rxJ" id="tKa-3x-gh5"/>
                 <outlet property="channelButton" destination="BX8-Th-SAd" id="0uJ-Ja-N0P"/>
+                <outlet property="channelCategoryArrow" destination="MuT-Jd-FPx" id="iUf-Ja-uQN"/>
                 <outlet property="channelCategoryView" destination="hSq-3x-Qsa" id="9GL-ya-iOc"/>
                 <outlet property="channelTableView" destination="cOu-1v-1OH" id="H2h-tD-50u"/>
                 <outlet property="favoriteButton" destination="3Sg-wQ-Ta7" id="6Uk-HJ-blj"/>
@@ -48,7 +51,6 @@
                     <rect key="frame" x="64" y="44" width="234" height="39.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="234" id="WxG-LH-jo5"/>
-                        <constraint firstAttribute="width" secondItem="uvX-Qo-2Yw" secondAttribute="height" multiplier="172:29" id="lQh-di-x2M"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-AP-MTJ">
@@ -123,7 +125,7 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-wQ-Ta7">
+                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-wQ-Ta7">
                                             <rect key="frame" x="648" y="42" width="30" height="46"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -152,7 +154,7 @@
                                         <constraint firstAttribute="height" constant="1" id="E6T-0o-O5Q"/>
                                     </constraints>
                                 </view>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="0A3-kb-dno">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0A3-kb-dno">
                                     <rect key="frame" x="40" y="166" width="688" height="240"/>
                                 </tableView>
                             </subviews>
@@ -192,6 +194,9 @@
                             <inset key="contentEdgeInsets" minX="20" minY="20" maxX="40" maxY="20"/>
                             <inset key="imageEdgeInsets" minX="-1" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="English Channels"/>
+                            <connections>
+                                <action selector="selectCategoryButtonAction:" destination="-1" eventType="primaryActionTriggered" id="pmh-d0-9qk"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.1764705882352941" green="0.19215686274509802" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -210,9 +215,32 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cOu-1v-1OH">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cOu-1v-1OH">
                     <rect key="frame" x="64" y="285" width="974" height="715"/>
+                    <color key="separatorColor" red="0.14509806040000001" green="0.18823529780000001" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-ha-rxJ">
+                    <rect key="frame" x="64" y="285" width="974" height="715"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-7N-Clt">
+                            <rect key="frame" x="0.0" y="0.0" width="974" height="715"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.15294117647058825" green="0.18823529411764706" blue="0.27450980392156865" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="wFx-7N-Clt" secondAttribute="bottom" id="2Ds-2e-Qgf"/>
+                        <constraint firstItem="wFx-7N-Clt" firstAttribute="leading" secondItem="IeI-ha-rxJ" secondAttribute="leading" id="3J9-gK-b5r"/>
+                        <constraint firstAttribute="trailing" secondItem="wFx-7N-Clt" secondAttribute="trailing" id="GKn-zw-wJH"/>
+                        <constraint firstItem="wFx-7N-Clt" firstAttribute="top" secondItem="IeI-ha-rxJ" secondAttribute="top" id="aaJ-M6-Mkg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="nkI-NY-t1X"/>
             <constraints>
@@ -224,6 +252,7 @@
                 <constraint firstItem="hSq-3x-Qsa" firstAttribute="width" secondItem="cOu-1v-1OH" secondAttribute="width" id="Fr6-W1-ofc"/>
                 <constraint firstItem="hSq-3x-Qsa" firstAttribute="top" secondItem="lXk-vj-YGH" secondAttribute="top" id="LVb-8T-chx"/>
                 <constraint firstItem="uvX-Qo-2Yw" firstAttribute="width" secondItem="uvX-Qo-2Yw" secondAttribute="height" multiplier="172:29" id="MQb-At-sbb"/>
+                <constraint firstItem="IeI-ha-rxJ" firstAttribute="height" secondItem="cOu-1v-1OH" secondAttribute="height" id="QRh-xH-kVH"/>
                 <constraint firstItem="nkI-NY-t1X" firstAttribute="bottom" secondItem="nNY-uL-5vJ" secondAttribute="bottom" constant="20" id="QXT-88-ZKv"/>
                 <constraint firstAttribute="trailing" secondItem="ykt-0m-UJc" secondAttribute="trailing" id="Ql5-as-ywh"/>
                 <constraint firstAttribute="bottom" secondItem="ykt-0m-UJc" secondAttribute="bottom" id="SdW-ai-MoT"/>
@@ -231,12 +260,15 @@
                 <constraint firstItem="uvX-Qo-2Yw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="64" id="V6E-SD-MGQ"/>
                 <constraint firstItem="nNY-uL-5vJ" firstAttribute="width" secondItem="ykt-0m-UJc" secondAttribute="width" multiplier="0.4" id="WNX-VZ-IkP"/>
                 <constraint firstAttribute="trailing" secondItem="qJI-MA-HU6" secondAttribute="trailing" constant="64" id="Xoq-NQ-tWf"/>
+                <constraint firstItem="IeI-ha-rxJ" firstAttribute="top" secondItem="cOu-1v-1OH" secondAttribute="top" id="byW-YZ-wr1"/>
                 <constraint firstItem="nNY-uL-5vJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="190" id="cB5-1f-zYe"/>
                 <constraint firstItem="nNY-uL-5vJ" firstAttribute="leading" secondItem="cOu-1v-1OH" secondAttribute="trailing" constant="50" id="cJE-io-Tiw"/>
                 <constraint firstItem="nkI-NY-t1X" firstAttribute="bottom" secondItem="cOu-1v-1OH" secondAttribute="bottom" constant="20" id="cUx-m5-syP"/>
                 <constraint firstItem="hSq-3x-Qsa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="64" id="cVv-mR-PvM"/>
+                <constraint firstItem="IeI-ha-rxJ" firstAttribute="leading" secondItem="cOu-1v-1OH" secondAttribute="leading" id="epZ-AD-85H"/>
                 <constraint firstAttribute="trailing" secondItem="nNY-uL-5vJ" secondAttribute="trailing" constant="64" id="i57-yY-Fc1"/>
                 <constraint firstItem="qJI-MA-HU6" firstAttribute="centerY" secondItem="uvX-Qo-2Yw" secondAttribute="centerY" id="ilL-VX-p1E"/>
+                <constraint firstItem="IeI-ha-rxJ" firstAttribute="width" secondItem="cOu-1v-1OH" secondAttribute="width" id="k4h-bW-YrN"/>
                 <constraint firstItem="4Ke-AP-MTJ" firstAttribute="leading" secondItem="uvX-Qo-2Yw" secondAttribute="trailing" constant="14" id="lKk-LB-cfS"/>
             </constraints>
             <point key="canvasLocation" x="185" y="34"/>

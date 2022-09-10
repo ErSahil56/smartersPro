@@ -8,9 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistMenuViewController" customModule="SmartersPro" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController" customModule="SmartersPro" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="RrB-rL-Sg6" id="itQ-eD-DXp"/>
+                <outlet property="tableViewHeight" destination="7No-tF-dBb" id="vWN-ca-SoW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
             </connections>
         </placeholder>
@@ -43,14 +44,14 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-KA-1s4">
-                    <rect key="frame" x="785" y="402.5" width="350" height="275"/>
+                    <rect key="frame" x="760" y="402.5" width="400" height="275"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-rL-Sg6">
-                            <rect key="frame" x="40" y="70" width="270" height="130"/>
+                            <rect key="frame" x="40" y="70" width="320" height="130"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="130" id="7No-tF-dBb"/>
-                                <constraint firstAttribute="width" constant="270" id="uhw-6K-mT6"/>
+                                <constraint firstAttribute="width" constant="320" id="uhw-6K-mT6"/>
                             </constraints>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="ad9-2u-9WH"/>

@@ -18,15 +18,21 @@
 		38361A7128CA5D0F0073BC28 /* tvScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38361A6F28CA5D0F0073BC28 /* tvScheduleTableViewCell.xib */; };
 		38361A7428CA5D650073BC28 /* channelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38361A7228CA5D650073BC28 /* channelTableViewCell.swift */; };
 		38361A7528CA5D650073BC28 /* channelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38361A7328CA5D650073BC28 /* channelTableViewCell.xib */; };
+		38475EF328CCF54F00255E02 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38475EF128CCF54F00255E02 /* SettingsViewController.swift */; };
+		38475EF428CCF54F00255E02 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38475EF228CCF54F00255E02 /* SettingsViewController.xib */; };
+		38475EF728CCFC2700255E02 /* settingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38475EF528CCFC2700255E02 /* settingsCollectionViewCell.swift */; };
+		38475EF828CCFC2700255E02 /* settingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38475EF628CCFC2700255E02 /* settingsCollectionViewCell.xib */; };
 		384C012428BA08F400D42E57 /* AddPlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C012228BA08F400D42E57 /* AddPlaylistCollectionViewCell.swift */; };
 		384C012528BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384C012328BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib */; };
 		384C012828BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */; };
 		384C012928BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */; };
 		388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388690FE28B7857400C0E63D /* SplashViewController.swift */; };
-		389E0D1828BE1E5A001A6DA4 /* PlaylistMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */; };
-		389E0D1928BE1E5A001A6DA4 /* PlaylistMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */; };
+		389E0D1828BE1E5A001A6DA4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1628BE1E5A001A6DA4 /* PopUpViewController.swift */; };
+		389E0D1928BE1E5A001A6DA4 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1728BE1E5A001A6DA4 /* PopUpViewController.xib */; };
 		389E0D1C28BE246D001A6DA4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */; };
 		389E0D1D28BE246D001A6DA4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */; };
+		38A1F78B28CCC696009E7E2A /* categoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A1F78928CCC696009E7E2A /* categoryTableViewCell.swift */; };
+		38A1F78C28CCC696009E7E2A /* categoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A1F78A28CCC696009E7E2A /* categoryTableViewCell.xib */; };
 		38A222B028BF839A00239BFD /* SideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A222AE28BF839A00239BFD /* SideTableViewCell.swift */; };
 		38A222B128BF839A00239BFD /* SideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A222AF28BF839A00239BFD /* SideTableViewCell.xib */; };
 		38BC52E228BF6896008A3A9C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC52E128BF6896008A3A9C /* SideMenuViewController.swift */; };
@@ -84,15 +90,21 @@
 		38361A6F28CA5D0F0073BC28 /* tvScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tvScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		38361A7228CA5D650073BC28 /* channelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = channelTableViewCell.swift; sourceTree = "<group>"; };
 		38361A7328CA5D650073BC28 /* channelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = channelTableViewCell.xib; sourceTree = "<group>"; };
+		38475EF128CCF54F00255E02 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		38475EF228CCF54F00255E02 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		38475EF528CCFC2700255E02 /* settingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		38475EF628CCFC2700255E02 /* settingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingsCollectionViewCell.xib; sourceTree = "<group>"; };
 		384C012228BA08F400D42E57 /* AddPlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		384C012328BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		388690FE28B7857400C0E63D /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMenuViewController.swift; sourceTree = "<group>"; };
-		389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistMenuViewController.xib; sourceTree = "<group>"; };
+		389E0D1628BE1E5A001A6DA4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		389E0D1728BE1E5A001A6DA4 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		389E0D1A28BE246D001A6DA4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		389E0D1B28BE246D001A6DA4 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		38A1F78928CCC696009E7E2A /* categoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryTableViewCell.swift; sourceTree = "<group>"; };
+		38A1F78A28CCC696009E7E2A /* categoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = categoryTableViewCell.xib; sourceTree = "<group>"; };
 		38A222AE28BF839A00239BFD /* SideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTableViewCell.swift; sourceTree = "<group>"; };
 		38A222AF28BF839A00239BFD /* SideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideTableViewCell.xib; sourceTree = "<group>"; };
 		38BC52E128BF6896008A3A9C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +225,8 @@
 				38361A6F28CA5D0F0073BC28 /* tvScheduleTableViewCell.xib */,
 				38361A7228CA5D650073BC28 /* channelTableViewCell.swift */,
 				38361A7328CA5D650073BC28 /* channelTableViewCell.xib */,
+				38A1F78928CCC696009E7E2A /* categoryTableViewCell.swift */,
+				38A1F78A28CCC696009E7E2A /* categoryTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -225,6 +239,25 @@
 				38361A7628CA5D730073BC28 /* Cells */,
 			);
 			path = WatchTV;
+			sourceTree = "<group>";
+		};
+		38475EF928CCFCE500255E02 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				38475EF128CCF54F00255E02 /* SettingsViewController.swift */,
+				38475EF228CCF54F00255E02 /* SettingsViewController.xib */,
+				38475EFA28CCFCF000255E02 /* Cells */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		38475EFA28CCFCF000255E02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38475EF528CCFC2700255E02 /* settingsCollectionViewCell.swift */,
+				38475EF628CCFC2700255E02 /* settingsCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		384C012028B7EA0000D42E57 /* ChoosePlayList */ = {
@@ -263,14 +296,14 @@
 			path = PlaylistType;
 			sourceTree = "<group>";
 		};
-		389E0D1E28BE2BC4001A6DA4 /* PlayListMenu */ = {
+		389E0D1E28BE2BC4001A6DA4 /* PopUpMenu */ = {
 			isa = PBXGroup;
 			children = (
-				389E0D1628BE1E5A001A6DA4 /* PlaylistMenuViewController.swift */,
-				389E0D1728BE1E5A001A6DA4 /* PlaylistMenuViewController.xib */,
+				389E0D1628BE1E5A001A6DA4 /* PopUpViewController.swift */,
+				389E0D1728BE1E5A001A6DA4 /* PopUpViewController.xib */,
 				389E0D1F28BE2D07001A6DA4 /* Cell */,
 			);
-			path = PlayListMenu;
+			path = PopUpMenu;
 			sourceTree = "<group>";
 		};
 		389E0D1F28BE2D07001A6DA4 /* Cell */ = {
@@ -405,7 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				388690FE28B7857400C0E63D /* SplashViewController.swift */,
-				389E0D1E28BE2BC4001A6DA4 /* PlayListMenu */,
+				389E0D1E28BE2BC4001A6DA4 /* PopUpMenu */,
 				384C012028B7EA0000D42E57 /* ChoosePlayList */,
 				384C012B28BA108600D42E57 /* PlaylistType */,
 				384C012128B7EA0F00D42E57 /* Login */,
@@ -418,6 +451,7 @@
 			children = (
 				38361A6928CA242F0073BC28 /* Dashboard */,
 				38361A7728CA5D7A0073BC28 /* WatchTV */,
+				38475EF928CCFCE500255E02 /* Settings */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -512,18 +546,21 @@
 				38A222B128BF839A00239BFD /* SideTableViewCell.xib in Resources */,
 				38CA4CA928BA4912002BF4DC /* Poppins-Regular.ttf in Resources */,
 				6B3132AB289EB602006C23B2 /* NewItemCollectionViewCell.xib in Resources */,
+				38475EF828CCFC2700255E02 /* settingsCollectionViewCell.xib in Resources */,
 				38CA4C9F28BA4912002BF4DC /* Poppins-ExtraLight.ttf in Resources */,
 				38CA4CA728BA4912002BF4DC /* Poppins-ExtraBold.ttf in Resources */,
 				38CA4CAD28BA4912002BF4DC /* Poppins-Thin.ttf in Resources */,
 				38CA4CA828BA4912002BF4DC /* Poppins-BlackItalic.ttf in Resources */,
+				38475EF428CCF54F00255E02 /* SettingsViewController.xib in Resources */,
 				38CA4CAB28BA4912002BF4DC /* Poppins-Bold.ttf in Resources */,
 				38CA4CAE28BA4912002BF4DC /* Poppins-SemiBold.ttf in Resources */,
 				38361A7128CA5D0F0073BC28 /* tvScheduleTableViewCell.xib in Resources */,
 				38CA4CA128BA4912002BF4DC /* Poppins-ExtraLightItalic.ttf in Resources */,
 				38CA4CA628BA4912002BF4DC /* Poppins-ExtraBoldItalic.ttf in Resources */,
-				389E0D1928BE1E5A001A6DA4 /* PlaylistMenuViewController.xib in Resources */,
+				389E0D1928BE1E5A001A6DA4 /* PopUpViewController.xib in Resources */,
 				38CA4CA228BA4912002BF4DC /* Poppins-BoldItalic.ttf in Resources */,
 				6B6FDCE328A3756C0006C811 /* MovieItemHeaderTableViewCell.xib in Resources */,
+				38A1F78C28CCC696009E7E2A /* categoryTableViewCell.xib in Resources */,
 				38CA4CA028BA4912002BF4DC /* Poppins-ThinItalic.ttf in Resources */,
 				384C012928BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib in Resources */,
 				6B313278289C1D12006C23B2 /* Main.storyboard in Resources */,
@@ -591,9 +628,10 @@
 				3809217228B509BE00E5B4D7 /* AppConfig.swift in Sources */,
 				3809216F28B509BE00E5B4D7 /* THColors.swift in Sources */,
 				389E0D1C28BE246D001A6DA4 /* MenuTableViewCell.swift in Sources */,
+				38A1F78B28CCC696009E7E2A /* categoryTableViewCell.swift in Sources */,
 				6B3132AA289EB602006C23B2 /* NewItemCollectionViewCell.swift in Sources */,
 				38361A7028CA5D0F0073BC28 /* tvScheduleTableViewCell.swift in Sources */,
-				389E0D1828BE1E5A001A6DA4 /* PlaylistMenuViewController.swift in Sources */,
+				389E0D1828BE1E5A001A6DA4 /* PopUpViewController.swift in Sources */,
 				6B6FDCDD28A370830006C811 /* MovieListCollectionViewCell.swift in Sources */,
 				3809217128B509BE00E5B4D7 /* UrlConfig.swift in Sources */,
 				38361A7428CA5D650073BC28 /* channelTableViewCell.swift in Sources */,
@@ -602,6 +640,8 @@
 				388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */,
 				38A222B028BF839A00239BFD /* SideTableViewCell.swift in Sources */,
 				6B313273289C1D12006C23B2 /* AppDelegate.swift in Sources */,
+				38475EF328CCF54F00255E02 /* SettingsViewController.swift in Sources */,
+				38475EF728CCFC2700255E02 /* settingsCollectionViewCell.swift in Sources */,
 				38BC52E228BF6896008A3A9C /* SideMenuViewController.swift in Sources */,
 				6B6FDCD928A36D3B0006C811 /* MovieListTableViewCell.swift in Sources */,
 				38361A6C28CA248F0073BC28 /* WatchTVViewController.swift in Sources */,

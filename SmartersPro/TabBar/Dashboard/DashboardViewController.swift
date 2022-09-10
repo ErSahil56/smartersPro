@@ -26,6 +26,10 @@ class DashboardViewController: UIViewController {
     var headerMovies = ["Similar Category","Latest Movies","Action Movies","SuperNatural Movies"]
     var headerSeries = ["Recently Added","Latest Series","Action Series","SuperNatural Series"]
     
+    override var preferredFocusedView: UIView? {
+        return self.movieListTableView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
@@ -70,10 +74,6 @@ class DashboardViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "By Genre", style: .default , handler:{ (UIAlertAction)in
             print("User click Genre button")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler:{ (UIAlertAction)in
-            print("User click Dismiss button")
         }))
         
         self.present(alert, animated: true, completion: {
@@ -142,7 +142,10 @@ extension DashboardViewController {
         super.didUpdateFocus(in: context, with: coordinator)
         
         UIView.animate(withDuration: 0.5) { () -> Void in
-            self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.015
+            DispatchQueue.main.async {
+                SideMenuViewController.initialPhase = false
+                self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.015
+            }
         }
         
         if context.previouslyFocusedView == sortButton {
