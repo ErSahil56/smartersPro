@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -158,7 +159,7 @@
                                     <rect key="frame" x="40" y="166" width="688" height="240"/>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" red="0.1647058874" green="0.21960783" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" name="ThemeColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="0A3-kb-dno" secondAttribute="trailing" constant="40" id="1dr-5E-tL3"/>
                                 <constraint firstAttribute="trailing" secondItem="8vY-4g-QBp" secondAttribute="trailing" constant="40" id="7Fc-Tf-qkZ"/>
@@ -199,7 +200,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.1764705882352941" green="0.19215686274509802" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" name="ThemeColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="6Ud-Ly-jCn"/>
                         <constraint firstAttribute="trailing" secondItem="MuT-Jd-FPx" secondAttribute="trailing" constant="30" id="DpA-Vb-Er0"/>
@@ -281,5 +282,8 @@
         <image name="clock_dash" width="15" height="15"/>
         <image name="favourite" width="20" height="26"/>
         <image name="watchTvPlaceholder" width="650" height="404"/>
+        <namedColor name="ThemeColor">
+            <color red="0.12941176470588234" green="0.16862745098039217" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

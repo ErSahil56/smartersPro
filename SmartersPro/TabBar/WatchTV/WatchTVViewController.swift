@@ -123,7 +123,7 @@ extension WatchTVViewController:  UITableViewDataSource, UITableViewDelegate {
             
             if let nextIndexPath = context.nextFocusedIndexPath {
                 if let nextCell = tableView.cellForRow(at: nextIndexPath) as? channelTableViewCell {
-                    nextCell.backgroundColor = "#313958".hexStringToUIColor()
+                    nextCell.backgroundColor = THColors.userSelectedColor
                     nextCell.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 }
             }
@@ -186,7 +186,7 @@ extension WatchTVViewController {
         
         if context.nextFocusedView == channelButton {
             channelCategoryView.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            channelCategoryView?.backgroundColor = "#313958".hexStringToUIColor()
+            channelCategoryView?.backgroundColor = THColors.userSelectedColor
         }
         
     }

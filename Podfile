@@ -10,4 +10,5 @@ target 'SmartersPro' do
   pod 'TvOSTextViewer'
   pod 'FocusTvButton'
   pod 'TvOSCustomizableTableViewCell'
+  pod 'Cosmos'
 end

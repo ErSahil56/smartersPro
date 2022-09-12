@@ -26,6 +26,8 @@
 		384C012528BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384C012328BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib */; };
 		384C012828BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */; };
 		384C012928BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */; };
+		385E2F4C28CF18F00027A0DF /* SeriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E2F4A28CF18EF0027A0DF /* SeriesDetailViewController.swift */; };
+		385E2F4D28CF18F00027A0DF /* SeriesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E2F4B28CF18EF0027A0DF /* SeriesDetailViewController.xib */; };
 		388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388690FE28B7857400C0E63D /* SplashViewController.swift */; };
 		389E0D1828BE1E5A001A6DA4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E0D1628BE1E5A001A6DA4 /* PopUpViewController.swift */; };
 		389E0D1928BE1E5A001A6DA4 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E0D1728BE1E5A001A6DA4 /* PopUpViewController.xib */; };
@@ -98,6 +100,8 @@
 		384C012328BA08F400D42E57 /* AddPlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		384C012628BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		384C012728BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		385E2F4A28CF18EF0027A0DF /* SeriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewController.swift; sourceTree = "<group>"; };
+		385E2F4B28CF18EF0027A0DF /* SeriesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesDetailViewController.xib; sourceTree = "<group>"; };
 		388690FE28B7857400C0E63D /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		389E0D1628BE1E5A001A6DA4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		389E0D1728BE1E5A001A6DA4 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 				38A222B228BF83A200239BFD /* SideMenu */,
 				6B6FDCD628A36CEB0006C811 /* Onboarding */,
 				6B6FDCDF28A375230006C811 /* TabBar */,
+				385E2F4A28CF18EF0027A0DF /* SeriesDetailViewController.swift */,
+				385E2F4B28CF18EF0027A0DF /* SeriesDetailViewController.xib */,
 				6B3132A2289C212B006C23B2 /* MainView */,
 				6B313279289C1D13006C23B2 /* Assets.xcassets */,
 				6B31327B289C1D13006C23B2 /* LaunchScreen.storyboard */,
@@ -564,6 +570,7 @@
 				38CA4CA028BA4912002BF4DC /* Poppins-ThinItalic.ttf in Resources */,
 				384C012928BA107C00D42E57 /* PlaylistTypeCollectionViewCell.xib in Resources */,
 				6B313278289C1D12006C23B2 /* Main.storyboard in Resources */,
+				385E2F4D28CF18F00027A0DF /* SeriesDetailViewController.xib in Resources */,
 				38CA4CAA28BA4912002BF4DC /* Poppins-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +644,7 @@
 				38361A7428CA5D650073BC28 /* channelTableViewCell.swift in Sources */,
 				3809217028B509BE00E5B4D7 /* THFonts.swift in Sources */,
 				384C012828BA107C00D42E57 /* PlaylistTypeCollectionViewCell.swift in Sources */,
+				385E2F4C28CF18F00027A0DF /* SeriesDetailViewController.swift in Sources */,
 				388690FF28B7857400C0E63D /* SplashViewController.swift in Sources */,
 				38A222B028BF839A00239BFD /* SideTableViewCell.swift in Sources */,
 				6B313273289C1D12006C23B2 /* AppDelegate.swift in Sources */,

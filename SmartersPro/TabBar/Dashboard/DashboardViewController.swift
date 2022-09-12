@@ -106,6 +106,14 @@ extension DashboardViewController: UITableViewDelegate,UITableViewDataSource {
         guard let cell = cell as? MovieListTableViewCell else { return }
         cell.setCollectionViewDataSourceDelegate(forRow: indexPath.row)
         cell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+        cell.collectionItemSelected = { index in
+            print(index)
+            if self.dashType == .series {
+                let objSeriesDetail = SeriesDetailViewController()
+                self.navigationController?.pushViewController(objSeriesDetail, animated: true)
+            }
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

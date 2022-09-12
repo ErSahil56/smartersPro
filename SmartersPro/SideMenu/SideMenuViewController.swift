@@ -157,7 +157,7 @@ extension SideMenuViewController:  UITableViewDataSource, UITableViewDelegate {
 
         if let nextIndexPath = context.nextFocusedIndexPath {
             let nextCell = tableView.cellForRow(at: nextIndexPath)
-            nextCell?.backgroundColor = "#313958".hexStringToUIColor()
+            nextCell?.backgroundColor = THColors.userSelectedColor
         }
 
     }
@@ -224,7 +224,7 @@ extension SideMenuViewController {
         
         if context.nextFocusedView == searchButton {
             searchButton.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            searchView?.backgroundColor = "#313958".hexStringToUIColor()
+            searchView?.backgroundColor = THColors.userSelectedColor
         }
         
         if context.previouslyFocusedView == profileButton {
@@ -234,7 +234,7 @@ extension SideMenuViewController {
         
         if context.nextFocusedView == profileButton {
             profileButton.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            profileButton?.backgroundColor = "#313958".hexStringToUIColor()
+            profileButton?.backgroundColor = THColors.userSelectedColor
         }
         
         if context.previouslyFocusedView == menuButton {
@@ -244,7 +244,7 @@ extension SideMenuViewController {
         
         if context.nextFocusedView == menuButton {
             menuButton.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            menuButton?.backgroundColor = "#313958".hexStringToUIColor()
+            menuButton?.backgroundColor = THColors.userSelectedColor
         }
         
     }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PopupKit
 
 class ChoosePlaylistViewController: UIViewController {
     

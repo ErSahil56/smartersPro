@@ -12,7 +12,9 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
     @IBOutlet weak var movieListCollectionView: UICollectionView!
     
     var imageArray = ["ironman", "justice","lostcity","spidey","strange","thor","wonderw","ironman", "justice","lostcity","spidey","strange","thor","wonderw"]
-
+    
+    var collectionItemSelected: ((IndexPath)->())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -57,6 +59,10 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieListCollectionViewCell", for: indexPath) as! MovieListCollectionViewCell
         cell.posterImageView.image = UIImage(named: imageArray[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.collectionItemSelected?(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

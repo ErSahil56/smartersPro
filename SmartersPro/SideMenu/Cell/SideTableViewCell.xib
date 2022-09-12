@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                 <subviews>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3la-jm-hHU">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="65"/>
-                        <color key="backgroundColor" red="0.19215686274509802" green="0.22352941176470587" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="UserSelectedColor"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="STz-ac-12R">
                         <rect key="frame" x="40" y="15" width="1880" height="35"/>
@@ -66,4 +67,9 @@
             <point key="canvasLocation" x="186" y="32"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="UserSelectedColor">
+            <color red="0.20800000429153442" green="0.25099998712539673" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

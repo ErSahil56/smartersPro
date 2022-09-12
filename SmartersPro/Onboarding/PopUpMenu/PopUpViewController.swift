@@ -75,7 +75,7 @@ extension PopUpViewController:  UITableViewDataSource, UITableViewDelegate {
         if let nextIndexPath = context.nextFocusedIndexPath {
             let nextCell = tableView.cellForRow(at: nextIndexPath)
             nextCell?.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
-            nextCell?.backgroundColor = "#313958".hexStringToUIColor()
+            nextCell?.backgroundColor = THColors.userSelectedColor
             nextCell?.cornerRadius = 20.0
         }
 

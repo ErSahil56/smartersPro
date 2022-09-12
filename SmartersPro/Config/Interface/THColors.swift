@@ -20,6 +20,10 @@ class THColors {
         return (UIColor.init(named: "UserSelectedColor") ?? THColors.themeColor) as UIColor
     }
     
+    static var buttonColor: UIColor {
+        return (UIColor.init(named: "ButtonColor") ?? THColors.themeColor) as UIColor
+    }
+    
     static var themeBackGroundColor: UIColor {
         return "#2D3C68".hexStringToUIColor()
     }

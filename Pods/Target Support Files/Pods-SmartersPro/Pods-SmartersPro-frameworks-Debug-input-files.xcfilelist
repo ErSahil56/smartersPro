@@ -1,7 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-SmartersPro/Pods-SmartersPro-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
 ${BUILT_PRODUCTS_DIR}/FocusTvButton/FocusTvButton.framework
 ${BUILT_PRODUCTS_DIR}/ParallaxView/ParallaxView.framework
-${BUILT_PRODUCTS_DIR}/PopupKit/PopupKit.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework
 ${BUILT_PRODUCTS_DIR}/TvOSCustomizableTableViewCell/TvOSCustomizableTableViewCell.framework
